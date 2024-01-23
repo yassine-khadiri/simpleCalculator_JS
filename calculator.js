@@ -31,68 +31,27 @@ input.style.borderRadius = "10px";
 input.style.backgroundColor = "#B5C9E2";
 
 //Create Buttons
+
+/*
+ * C % / x
+ * 7 8 9 -
+ * 4 5 6 +
+ * 1 2 3 .
+ * 0 | = |
+ *
+*/
+
+const BUTTONS = "=0.321+654-987x/%C";
 i = 17;
 while (i > -1) {
-  switch (i) {
-    case 17:
-      text = document.createTextNode("C");
-      break;
-    case 16:
-      text = document.createTextNode("%");
-      break;
-    case 15:
-      text = document.createTextNode("/");
-      break;
-    case 14:
-      text = document.createTextNode("x");
-      break;
-    case 13:
-      text = document.createTextNode("7");
-      break;
-    case 12:
-      text = document.createTextNode("8");
-      break;
-    case 11:
-      text = document.createTextNode("9");
-      break;
-    case 10:
-      text = document.createTextNode("-");
-      break;
-    case 9:
-      text = document.createTextNode("4");
-      break;
-    case 8:
-      text = document.createTextNode("5");
-      break;
-    case 7:
-      text = document.createTextNode("6");
-      break;
-    case 6:
-      text = document.createTextNode("+");
-      break;
-    case 5:
-      text = document.createTextNode("1");
-      break;
-    case 4:
-      text = document.createTextNode("2");
-      break;
-    case 3:
-      text = document.createTextNode("3");
-      break;
-    case 2:
-      text = document.createTextNode(".");
-      break;
-    case 1:
-      text = document.createTextNode("0");
-      break;
-    case 0:
-      text = document.createTextNode("=");
-      break;
-  }
+  text = document.createTextNode(BUTTONS[i]);
 
   btn = document.createElement("button");
+
   btn.appendChild(text);
+
   mainDiv.appendChild(btn);
+
   btn.style.width = "90px";
   btn.style.height = "90px";
   btn.style.margin = "10px";
@@ -120,9 +79,11 @@ while (i > -1) {
   btn.onclick = function () {
     this.style.backgroundColor = "red";
   };
-  
+
   btn.onblur = function () {
     this.style.backgroundColor = "#B09390";
   };
+
+
   i--;
 }

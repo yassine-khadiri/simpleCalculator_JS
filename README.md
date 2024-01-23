@@ -1,1 +1,2 @@
-# simpleCalculator_JS (!BACKEND)
+# simpleCalculator_JS
+A simple calculator using JavaScript only!
